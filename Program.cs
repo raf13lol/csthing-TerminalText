@@ -20,7 +20,7 @@ class Program
         string Go = terminal.Question("See if you can break this, if you can, report it! ");
 
         terminal.AddLine("Your attempt is: " + Go);
-        terminal.AddLine("My attempt of sanitization is: " + TerminalFancyTextParser.ParseTextWithANSICodes(Go, true));
+        terminal.AddLine(TerminalANSICodes.BuildANSITag(TerminalANSICodes.ResetAll) + "My attempt of sanitization is: " + TerminalFancyTextParser.ParseTextWithANSICodes(Go, true));
 
         // read key works really weirdly... do it if you want but ehhh uhhh hmmm
         // terminal.AddLine("<i>key: " + terminal.ReadKey() + "</i>");
